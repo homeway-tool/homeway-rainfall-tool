@@ -86,6 +86,6 @@ function init(){
   var first=getIds()[0];
   if(first){ sel.value=first; changeDrain(first); }
 }
-fetch('data.json').then(function(r){return r.json();}).then(function(json){DATA=json; init();}).catch(function(){
+fetch('data.json?v=2').then(function(r){return r.json();}).then(function(json){DATA=json; init();}).catch(function(){
   document.getElementById('input-card').innerHTML='<div class="empty-note">資料讀取失敗。若你是直接用手機打開本機檔案，請改用 GitHub Pages 網址開啟。</div>';
 });
