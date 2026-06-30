@@ -4,7 +4,7 @@ var durations = [];
 
 function formatNum(v){
   if(v===null || v===undefined || isNaN(v)) return '—';
-  return (Math.round(Number(v)*10)/10).toFixed(1);
+  return Math.round(Number(v));
 }
 function esc(s){return String(s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[c];});}
 function getIds(){return Object.keys(DATA);}
