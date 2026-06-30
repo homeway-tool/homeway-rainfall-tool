@@ -1,14 +1,12 @@
 # 區域排水暴雨雨量比對工具
 
-## GitHub Pages 使用方式
+使用方式：
+1. 將本資料夾所有檔案上傳至 GitHub repository 根目錄。
+2. GitHub Pages 設定為 main / root。
+3. 若網站仍顯示舊資料，請等待 1 分鐘後用無痕模式開啟，或在網址後加 ?v=20260630_fix2。
 
-1. 建立一個新的 GitHub repository。
-2. 將本資料夾內的 `index.html`、`style.css`、`script.js`、`data.json` 上傳到 repository 根目錄。
-3. 到 Settings → Pages。
-4. Source 選擇 Deploy from a branch。
-5. Branch 選擇 `main`，資料夾選 `/root`。
-6. 儲存後即可取得網址。
-
-## 更新資料
-
-未來只要重做或更新 `data.json`，網頁程式本身不用改。
+本版更新：
+- 使用最新 Excel：test(2).xlsx
+- 重現期距雨量資料直接存成整數
+- 網頁顯示全部採四捨五入整數
+- 移除單獨的「本次事件加權雨量」摘要區，只保留比對表
