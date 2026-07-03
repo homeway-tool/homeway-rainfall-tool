@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>區域排水暴雨雨量比對工具</title>
-  <link rel="stylesheet" href="style.css?v=20260703_v14">
+  <link rel="stylesheet" href="style.css?v=20260703_v15">
 </head>
 <body>
   <header>
@@ -13,6 +13,20 @@
   </header>
 
   <main>
+    <section class="card intro-card">
+      <h2>工具說明</h2>
+      <p>．本工具之計算公式與參數係參考各區域排水最新規劃或檢討報告中的水文分析成果建置。
+
+．各區域排水所對應之重現期距降雨量，均採用「24小時累積降雨量」作為分析基準。
+
+．為利豪雨或颱風期間能即時取得雨量資料並快速進行重現期距分析，若原規劃報告採用台糖公司或農田水利署雨量站資料，本工具將以鄰近之中央氣象署或經濟部水利署雨量站資料進行替代分析，以提高資料取得效率與即時性。
+
+．雨量資料查詢：
+　－ 中央氣象署雨量查詢網頁(https://www.cwa.gov.tw/V8/C/W/OBS_County.html?ID=10013)
+　－ 經濟部水利署水文資訊服務網(https://gweb.wra.gov.tw/Hydroinfo/?id=Index)</p>
+      <p class="small">本工具僅供事件雨量初步比對及防汛應變參考，實際分析仍應依主管機關公告資料、最新規劃報告及專業水文檢討成果辦理。</p>
+    </section>
+
     <section class="card selector-card">
       <label for="drain-select">請選擇區域排水</label>
       <div class="select-row">
@@ -24,9 +38,9 @@
     <section id="input-card" class="card"></section>
     <section id="result-card" class="card"></section>
 
-    <div class="footer">資料來源：使用者提供 Excel 轉製｜版本：20260703_v14</div>
+    <div class="footer">資料來源：使用者提供 Excel 轉製｜版本：20260703_v15</div>
   </main>
 
-  <script src="script.js?v=20260703_v14"></script>
+  <script src="script.js?v=20260703_v15"></script>
 </body>
 </html>

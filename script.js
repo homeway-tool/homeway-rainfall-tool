@@ -1,6 +1,6 @@
 var DATA = {};
 var currentId = null;
-var VERSION = "20260703_v14";
+var VERSION = "20260703_v15";
 
 function formatNum(v){
   if(v===null || v===undefined || isNaN(v)) return '—';
@@ -34,7 +34,8 @@ function weightedRain(id, durationIndex){
 
 function buildStationInput(id){
   var d=DATA[id];
-  var html='<h2>'+esc(d.displayName || ((d.city?d.city+"－":"")+d.name))+'</h2>';
+  var title=d.displayName || ((d.city?d.city+"－":"")+d.name);
+  var html='<h2>'+esc(title)+'</h2>';
   html+='<div class="hint">採用雨量站：'+d.stations.map(function(s){
     return esc(s.station)+' '+Math.round(Number(s.weight)*100)+'%';
   }).join('、')+'</div>';
@@ -66,7 +67,8 @@ function buildStationInput(id){
 
 function buildCompareTable(id){
   var d=DATA[id];
-  var html='<h3>'+esc(d.displayName || d.name)+'｜各延時各重現期距雨量表</h3>';
+  var title=d.displayName || d.name;
+  var html='<h3>'+esc(title)+'｜各延時各重現期距雨量表</h3>';
   html+='<div class="table-wrap"><table class="compare-table"><thead><tr><th>延時</th><th>本次加權雨量</th>';
   d.periods.forEach(function(p){
     html+='<th>'+esc(p.period)+'</th>';
@@ -126,7 +128,7 @@ function init(){
   }
 }
 
-fetch('data.json?v=20260703_v14').then(function(r){
+fetch('data.json?v=20260703_v15').then(function(r){
   return r.json();
 }).then(function(json){
   DATA=json;
