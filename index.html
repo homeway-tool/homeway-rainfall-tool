@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>區域排水暴雨雨量比對工具</title>
+  <link rel="stylesheet" href="style.css?v=20260630_fix2">
+</head>
+<body>
+  <header>
+    <h1>區域排水暴雨雨量比對工具</h1>
+    <p>選擇區域排水 → 輸入雨量站雨量 → 顯示各延時重現期距雨量比對表</p>
+  </header>
+  <main>
+    <section class="card">
+      <label for="drain-select">請選擇區域排水</label>
+      <div class="select-row">
+        <select id="drain-select" aria-label="選擇區域排水"></select>
+        <button type="button" onclick="renderResults()">更新結果</button>
+      </div>
+    </section>
+    <section id="input-card" class="card"></section>
+    <section id="result-card" class="card"></section>
+    <div class="footer">資料來源：使用者提供 Excel 轉製｜版本：20260630_fix2</div>
+  </main>
+  <script src="script.js?v=20260630_fix2"></script>
+</body>
+</html>
