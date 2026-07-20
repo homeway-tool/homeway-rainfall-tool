@@ -1,6 +1,6 @@
 var DATA = {};
 var currentId = null;
-var VERSION = "20260703_v15";
+var VERSION = "20260720_v18";
 
 function formatNum(v){
   if(v===null || v===undefined || isNaN(v)) return '—';
@@ -128,7 +128,7 @@ function init(){
   }
 }
 
-fetch('data.json?v=20260703_v15').then(function(r){
+fetch('data.json?v=20260720_v18').then(function(r){
   return r.json();
 }).then(function(json){
   DATA=json;
